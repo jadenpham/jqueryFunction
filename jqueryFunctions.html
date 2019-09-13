@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('#addclass').click(function(){
+                $('.add').addClass("red");
+            })
+            $('#pictoggle').click(function(){
+                $('#ram').slideToggle("slow", function(){
+
+                });
+            });
+            $(".btn").click(function(){
+                $(".append").append("<h1>This is the new append</h1>")
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="add">
+        <h1>Add class</h1>
+        <p>click button to add class 'red' to paragraph</p>
+        <button id="addclass">click me</button>
+    </div>
+    <div class="toggle">
+        <h1>Sliding Toggle</h1>
+        <button id="pictoggle">See picture</button>
+    </div>
+    <img id="ram" src="https://cdn.bleacherreport.net/images/team_logos/328x328/los_angeles_rams.png" alt="">
+
+    <div class="append">
+        <h1>Append</h1>
+        <button class="btn">Append here</button>
+    </div>
+</body>
+</html>
